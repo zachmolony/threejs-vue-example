@@ -46,9 +46,9 @@ export default {
       const ambientLight = new THREE.HemisphereLight(
         0xffffff, // bright sky color
         0x222222, // dim ground color
-        1 // intensity
+        0.2 // intensity
       );
-      const mainLight = new THREE.DirectionalLight(0xffffff, 4.0);
+      const mainLight = new THREE.DirectionalLight(0xffffff, 2.0);
       mainLight.position.set(10, 10, 10);
       this.scene.add(ambientLight, mainLight);
 
