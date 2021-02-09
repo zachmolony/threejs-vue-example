@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <CRT />
-    <div class="container">
-      <HelloWorld />
+    <div class="content">
+      <div class="crt">
+        <CRT />
+      </div>
+      <div class="product">
+        <HelloWorld />
+      </div>
     </div>
   </div>
 </template>
@@ -21,6 +25,11 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
 html,
 body,
 #app {
@@ -28,6 +37,7 @@ body,
   padding: 0;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -35,10 +45,24 @@ body,
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: blue;
 }
-.container {
-  width: 900px;
-  height: 900px;
+.content {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.product {
+  margin-top: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.crt {
+  position: absolute;
+  z-index: -1;
 }
 </style>

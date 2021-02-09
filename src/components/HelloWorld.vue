@@ -6,7 +6,7 @@
 import * as THREE from "three";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import Stats from "stats.js";
+// import Stats from "stats.js";
 
 export default {
   name: "HelloWorld",
@@ -17,7 +17,7 @@ export default {
       camera: null,
       controls: null,
       renderer: null,
-      stats: null,
+      // stats: null,
     };
   },
   methods: {
@@ -26,8 +26,8 @@ export default {
       this.container = this.$refs.sceneContainer;
 
       // add stats
-      this.stats = new Stats();
-      this.container.appendChild(this.stats.dom);
+      // this.stats = new Stats();
+      // this.container.appendChild(this.stats.dom);
 
       // add camera
       const fov = 10; // Field of view
@@ -103,12 +103,8 @@ export default {
     },
     render() {
       this.renderer.render(this.scene, this.camera);
-      this.stats.update();
+      // this.stats.update();
       // this.animate();
-    },
-    animate: function() {
-      requestAnimationFrame(this.animate);
-      this.mesh.rotation.y += 0.02;
     },
   },
   mounted() {
@@ -119,21 +115,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 #scene-container {
-  height: 100%;
+  height: 600px;
+  width: 600px;
 }
 </style>
