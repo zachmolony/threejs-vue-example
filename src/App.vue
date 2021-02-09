@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <CRT />
+    <div class="container">
+      <HelloWorld />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CRT from "./components/CRT.vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    CRT,
+  },
+};
 </script>
 
 <style>
@@ -30,5 +35,10 @@ body,
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: blue;
+}
+.container {
+  width: 900px;
+  height: 900px;
 }
 </style>
