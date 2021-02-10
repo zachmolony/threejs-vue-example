@@ -6,6 +6,7 @@
       </div>
       <div class="product">
         <HelloWorld />
+        <ProductInfo />
       </div>
     </div>
   </div>
@@ -14,12 +15,14 @@
 <script>
 import CRT from "./components/CRT.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import ProductInfo from "./components/ProductInfo.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
     CRT,
+    ProductInfo,
   },
 };
 </script>
@@ -40,11 +43,12 @@ body,
   position: relative;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #88aa93;
+  font-size: 20px;
 }
 .content {
   width: 1000px;

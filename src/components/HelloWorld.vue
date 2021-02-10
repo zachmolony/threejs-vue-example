@@ -17,17 +17,12 @@ export default {
       camera: null,
       controls: null,
       renderer: null,
-      // stats: null,
     };
   },
   methods: {
     init() {
       // set container
       this.container = this.$refs.sceneContainer;
-
-      // add stats
-      // this.stats = new Stats();
-      // this.container.appendChild(this.stats.dom);
 
       // add camera
       const fov = 10; // Field of view
@@ -40,7 +35,6 @@ export default {
 
       // create scene
       this.scene = new THREE.Scene();
-      // this.scene.background = new THREE.Color('skyblue')
 
       // add lights
       const ambientLight = new THREE.HemisphereLight(
@@ -103,8 +97,6 @@ export default {
     },
     render() {
       this.renderer.render(this.scene, this.camera);
-      // this.stats.update();
-      // this.animate();
     },
   },
   mounted() {
