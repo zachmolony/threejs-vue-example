@@ -1,4 +1,4 @@
-# threejs-vue-example
+# OUTER LIMITS
 
 Sets up a super basic example of using GLTFLoader with a vue project set up with vue cli.
 
